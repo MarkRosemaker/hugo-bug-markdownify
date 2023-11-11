@@ -1,0 +1,35 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with 'go test -c'
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# IDE directories
+.idea
+.vscode
+.schemas
+.history
+
+# Build and Environment
+cmd/app/app
+dist/
+
+# Log Files
+*.log
+
+# macOS files
+*.DS_Store
+
+# Hugo output
+public/
+exampleSite/public/
+exampleSite/resources/
+exampleSite/node_modules/
+*.hugo_build.lock

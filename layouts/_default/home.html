@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		{{ range slice
+			"\n\nparagraph\n\n"
+			"paragraph\n\nsecond paragraph"
+			"# My Title\nparagraph"
+			"# My Title\n\nparagraph\n"
+			"# My Title\n\nparagraph\n\n"
+			"# My Title\n\nparagraph\n\nsecond paragraph\n\n"
+		}}
+		<h2>Testing {{ . | printf "%q" }}</h2>
+		<p>$.Page.RenderString: {{ . | $.Page.RenderString | printf "%q" }}</p>
+		<p>markdownify: {{ . | markdownify | printf "%q" }}</p>
+		{{ end }}
+	</body>
+</html>
